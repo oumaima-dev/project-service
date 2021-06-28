@@ -32,6 +32,11 @@ public class ProjectController {
         return projectService.getProjects();
     }
 
+    @GetMapping("/{projectId}")
+    public Project getProjectById(@PathVariable String projectId){
+        return projectService.getProjectById(projectId);
+
+    }
 
 
     @PostMapping("/add")
@@ -51,5 +56,13 @@ public class ProjectController {
 
         return new ResponseEntity(projectService.saveAnnouncement(announcement,projectId), HttpStatus.OK);
     }
+
+    @GetMapping("/{projectId}/getAnnouncement")
+    public ResponseEntity<?> getAnnouncement
+            (@PathVariable String projectId){
+
+        return new ResponseEntity(projectService.getAnnouncements(projectId), HttpStatus.OK);
+    }
+
 
 }

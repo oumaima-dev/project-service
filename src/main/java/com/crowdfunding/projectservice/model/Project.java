@@ -39,8 +39,4 @@ public class Project implements Serializable {
     private List<Announcement> announcements = new ArrayList<>();
     //private Integer idPublisher;
 
-
-
-
-
 }
