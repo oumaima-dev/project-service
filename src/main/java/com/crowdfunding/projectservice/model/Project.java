@@ -21,7 +21,6 @@ import java.util.List;
 @JsonIgnoreProperties(value = {"creationDate"}, allowGetters = true)
 @Document(collection = "project")
 public class Project implements Serializable {
-
     @Id
     private String id;
 
@@ -31,12 +30,8 @@ public class Project implements Serializable {
     private Double fundGoal;
     private Date creationDate = new Date();
     private Date endDate;
-    //private Double raisedFunds;
     private String category;
     private String imgUrl;
-
-    //private Picture picture;
     private List<Announcement> announcements = new ArrayList<>();
-    //private Integer idPublisher;
-
+    //private String projectOwner;
 }

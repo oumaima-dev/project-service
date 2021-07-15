@@ -14,5 +14,5 @@ public class Announcement {
     @Id
     private String id;
     private String message;
-    private Date AnnCreationDate = new Date();
+    private Date AnnCreationDate;
 }
